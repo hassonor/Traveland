@@ -33,7 +33,8 @@
 }
 
 @mixin animation($name, $duration, $timeFunction, $translateFirst, $translateSecond, $scaleValue){
-  animation: $name $duration $timeFunction;
+  animation: $name $duration $timeFunction ;
+
   @keyframes #{$name} {
     0%{
       opacity: 0;
