@@ -34,8 +34,8 @@ const Login = (props) =>{
                 name=""
                 className="group__control"
                 placeholder="סיסמא"
-                value={state.email}
-                onChange={(e)=> setState({...state, email: e.target.value})}
+                value={state.password}
+                onChange={(e)=> setState({...state, password: e.target.value})}
             />
         </div>
         <div className='group flex space-between y-center'>
