@@ -1,0 +1,13 @@
+@use "../abstracts";
+.model{
+  @include abstracts.position(fixed,0,0,0,0, 100%, 100%);
+  background: rgba(0, 0, 0, .4);
+  @include abstracts.align(flex, center, center, null);
+  &__body{
+      background: abstracts.$white;
+      width: 38rem;
+      height: auto;
+      padding: 2rem;
+      font-size: 1.4rem;
+  }
+}
