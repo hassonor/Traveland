@@ -22,7 +22,10 @@
          font-weight: 900;
          font-size: 4.1rem;
          line-height: 2.8rem;
+         animation: pop-in .6s ease-out forwards;
+         @include mixins.animation(heading, 1s, ease-in, -4rem, 0,.8);
        }
+
        &__p{
          margin-top: .8rem;
          color: variables.$white;

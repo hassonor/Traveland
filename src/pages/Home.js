@@ -4,13 +4,13 @@ import {useState} from 'react';
 
 const Home = () => {
     const [state] = useState({
-        heading: 'Travel for your Soul.',
-        paragraph: 'Join us Today! Travel the most beautiful places in the world!'
+        heading: ' Traveland מטיילים ונהנים',
+        paragraph: 'הצטרף אלינו היום! וגלה את המקומות והיעדים היפים בעולם!'
     })
     return (
         <>
         <Header heading={state.heading} paragraph={state.paragraph}>
-            <button className="btn-default">Press Here</button>
+            <button className="btn-default">בוא נתחיל</button>
         </Header>
         </>
     )
