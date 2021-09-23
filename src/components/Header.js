@@ -4,7 +4,7 @@ const Header = ({heading, paragraph, children }) => {
     const [state] = useState({
         video: './assets/videos/video.mp4',
         poster: '/assets/images/screen.png',
-        logo: '/assets/images/logo.svg'
+        logo: '/assets/images/logo.png'
     })
     return(
         <div className="header">

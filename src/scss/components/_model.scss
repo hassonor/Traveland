@@ -3,11 +3,20 @@
   @include abstracts.position(fixed,0,0,0,0, 100%, 100%);
   background: rgba(0, 0, 0, .4);
   @include abstracts.align(flex, center, center, null);
+  &__heading{
+    h3{
+      font-size: 2.1rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+  }
   &__body{
       background: abstracts.$white;
-      width: 38rem;
+      width: 40rem;
       height: auto;
       padding: 2rem;
       font-size: 1.4rem;
+    @include abstracts.animation(modelAnimate, .4s, linear, -10rem,  0, 1)
   }
 }

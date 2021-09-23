@@ -1,15 +1,20 @@
+import {useContext} from "react";
+import ModelContext from "../context/ModelContext";
+import {CLOSE_MODEL} from "../context/types/ModelTypes";
 
-const Model  = () =>{
-    return(
-        <div className="model">
-            <div className="model__body">
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-
-                קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט
-
+const Model  = (props) =>{
+    const {state, dispatch} = useContext(ModelContext);
+    const close = (e) => {
+        if(e.target.getAttribute('class') === 'model'){
+            dispatch({type: CLOSE_MODEL});
+        }
+    }
+    return state.modelStatus ? (<div className='model' onClick={close}>
+            <div className='model__body' >
+                {props.children}
             </div>
-        </div>
-    )
+        </div>):
+        ('');
 }
 
 export default Model;
