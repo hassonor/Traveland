@@ -1,3 +1,33 @@
 @mixin position($position, $top, $left, $bottom, $right, $width, $height){
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+}
 
+@mixin align($flex, $justify-content, $align-items, $height){
+  display: $flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  height: $height;
+}
+
+@mixin button($firstColor, $secondColor, $textColor, $height,$fontSize,$bdr, $paddingVertical, $paddingHorizontal) {
+  background: linear-gradient(to right, $firstColor, $secondColor);
+  color: $textColor;
+  text-decoration: none;
+  height: $height;
+  line-height: $height;
+  display: inline-block;
+  font-size: $fontSize;
+  font-weight: 400;
+  border-radius: $bdr;
+  padding: $paddingVertical $paddingHorizontal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
