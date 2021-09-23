@@ -3,10 +3,16 @@ import {useState} from "react";
 const Header = ({heading, paragraph, children }) => {
     const [state] = useState({
         video: './assets/videos/video.mp4',
-        poster: "/assets/images/screen.png"
+        poster: '/assets/images/screen.png',
+        logo: '/assets/images/logo.svg'
     })
     return(
         <div className="header">
+            <div className="container">
+                <div className="header__logo">
+                    <img src={state.logo} alt="logoImage"/>
+                </div>
+            </div>
             <div className="header__video">
             <video src={state.video} autoPlay loop muted poster={state.poster}/>
             </div>

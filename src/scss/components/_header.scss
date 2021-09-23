@@ -5,6 +5,15 @@
   height: 100vh;
   position: relative;
   clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+  &__logo{
+    @include mixins.position(absolute, 3rem, 0, null, null, null, null);
+    z-index: 1;
+    img{
+      width: 13rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
   &__video{
     @include mixins.position(absolute, 0, 0, null, null, 100%, 100%);
     overflow: hidden;
@@ -19,13 +28,13 @@
          color: variables.$white;
          text-transform: uppercase;
          font-weight: 900;
-         font-size: 4.1rem;
-         line-height: 2.8rem;
+         font-size: 4.2rem;
+         line-height: 3rem;
          @include mixins.animation(heading, 0.8s, ease-in, -4rem, 0,.8);
        }
 
        &__p{
-         margin-top: .8rem;
+         margin-top: 1rem;
          color: variables.$white;
          font-size: 1.6rem;
          @include mixins.animation(subHeading, 0.8s, ease-out, -6rem, 0,.8);

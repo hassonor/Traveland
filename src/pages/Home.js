@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 const Home = () => {
     const [state] = useState({
-        heading: ' Traveland מטיילים ונהנים',
+        heading: ' X-Travel מטיילים ונהנים',
         paragraph: 'הצטרף אלינו היום! וגלה את המקומות והיעדים היפים בעולם!'
     })
     return (
