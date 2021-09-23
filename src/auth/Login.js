@@ -1,19 +1,42 @@
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import ModelContext from "../context/ModelContext";
 import {OPEN_MODEL} from "../context/types/ModelTypes";
 
 const Login = (props) =>{
     const {dispatch} = useContext(ModelContext);
-    return (<form>
+    const [state, setState] = useState({
+        email: '',
+        password:''
+    });
+    const loginForm = (e) =>{
+        e.preventDefault();
+        console.log(state);
+        // Todo
+    }
+    return (<form onSubmit={loginForm}>
         <div className="model__heading">
             <h3>התחברות</h3>
         </div>
 
         <div className='group'>
-            <input type="email" name="" className="group__control" placeholder="אימייל"/>
+            <input
+                type="email"
+                name=""
+                className="group__control"
+                placeholder="אימייל"
+                value={state.email}
+                onChange={(e)=> setState({...state, email: e.target.value})}
+            />
         </div>
         <div className='group'>
-            <input type="password" name="" className="group__control" placeholder="סיסמא"/>
+            <input
+                type="password"
+                name=""
+                className="group__control"
+                placeholder="סיסמא"
+                value={state.email}
+                onChange={(e)=> setState({...state, email: e.target.value})}
+            />
         </div>
         <div className='group flex space-between y-center'>
             <input type="submit" name="" className="btn-dark" value="התחבר"/>
