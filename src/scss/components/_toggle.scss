@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.toggle-open{
+  @include position(fixed, 4rem, null,null, 3rem, null, null);
+  cursor: pointer;
+  z-index: 5;
+  span:nth-child(1){
+      @include toggleSpanStyle($mainColor2, 3rem, .3rem, null);
+  }
+  span:nth-child(2){
+    @include toggleSpanStyle($mainColor2, 3rem, .3rem, .5rem);
+  }
+  span:nth-child(3){
+    @include toggleSpanStyle($mainColor2, 3rem, .3rem, .5rem);
+  }
+}
+
+.toggle-close{
+  @include position(fixed, 4rem, null,null, 3rem, null, null);
+  cursor: pointer;
+  z-index: 5;
+  span:nth-child(1){
+    @include toggleSpanStyle($mainColor2, 3rem, 1.5px, .5rem);
+    transform: rotate(-45deg) translateY(.5rem);
+  }
+  span:nth-child(2){
+    display: none;
+  }
+  span:nth-child(3){
+    @include toggleSpanStyle($mainColor2, 3rem, 1.5px, .5rem);
+    transform: rotate(45deg) translateY(-.5rem);
+  }
+}

@@ -1,7 +1,17 @@
+import {Helmet} from "react-helmet-async";
+
 const About = () =>{
     return(
-        <h1> About Page</h1>
-    )
+        <>
+            <Helmet>
+                <title>About Us</title>
+                <meta name="description" content="iTravel about page"/>
+            </Helmet>
+
+            <h1 style={{direction: 'ltr'}} >About Page</h1>
+
+        </>
+            )
 }
 
 export default About;

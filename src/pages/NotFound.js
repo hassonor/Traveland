@@ -1,6 +1,16 @@
-const NotFound = () => {
+import {Helmet} from "react-helmet-async";
+
+const NotFound = () =>{
     return(
-        <h1> Not Found</h1>
+        <>
+            <Helmet>
+                <title>Error 404</title>
+                <meta name="description" content="iTravel Not Found Page"/>
+            </Helmet>
+
+            <h1 style={{direction: 'ltr'}} >אופס, דף האינטרנט שביקשת לא נמצא</h1>
+
+        </>
     )
 }
 

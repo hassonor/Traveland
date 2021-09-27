@@ -1,0 +1,51 @@
+@use "../abstracts/index" as *;
+
+.navClass {
+  @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+  background: rgba(0,0,0, .5);
+  z-index: 3;
+}
+
+.nav{
+  @include position(fixed, 0, null, 0, 0, 31.3rem, 100%);
+  @include align(flex, center, center, 100%);
+  background:$white;
+  z-index: 4;
+  transition: all .2s linear;
+  &__content{
+    width: 100%;
+    li{
+      list-style: none;
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 1.5rem 3rem;
+        text-align: right;
+        color: $black;
+        $font-size: 1.6rem;
+        font-weight: 400;
+        position: relative;
+        &:before {
+          @include position(absolute, 0,0, 0, 0,100%, 100%);
+          content: "";
+          background: linear-gradient(to right, $mainColor1, $mainColor2);
+          z-index: -1;
+          transform: scale(0);
+          transition: all .3s linear;
+        }
+        &:hover:before {
+          transform: scale(1);
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  &--close{
+    transform: translateX(100%);
+  }
+  &--open{
+    transform: translateX(0);
+  }
+}
