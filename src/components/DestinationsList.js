@@ -1,5 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {SiGooglemaps} from "react-icons/si";
+import {Link} from 'react-router-dom';
 
 const DestinationsList = ({ destination }) =>{
     return(
@@ -14,6 +15,11 @@ const DestinationsList = ({ destination }) =>{
                         <div className="destinations__card__layer__content__country">
                             {destination.name}
                         </div>
+                    </div>
+                </div>
+                <div className="destinations__card__info">
+                    <div className="destinations__card__info__text">
+                        <Link className='btn-white'>למד עוד</Link>
                     </div>
                 </div>
             </div>

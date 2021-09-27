@@ -60,5 +60,17 @@
         }
       }
     }
+    &__info {
+      @include position(absolute, 0, 0, null, null, 100%, 100%);
+      @include align(flex, center, center, null);
+      background: linear-gradient(to right, $mainColor1, $mainColor2);
+      visibility: hidden;
+      transform: scale(0);
+      transition: all .5s linear;
+    }
+    &:hover &__info {
+      visibility: visible;
+      transform: scale(1);
+    }
   }
 }

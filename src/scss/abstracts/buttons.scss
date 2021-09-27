@@ -1,0 +1,15 @@
+@use "index" as *;
+
+.btn-default{
+  @include button($mainColor1, $mainColor2, $white, 4.5rem,1.4rem,.2rem, 0,2rem);
+}
+
+.btn-dark{
+  @include button($darkBlack, $darkBlack, $white, 4.5rem, 1.4rem, .4rem, 0, 2rem);
+  letter-spacing: .1rem;
+}
+
+.btn-white{
+  @include button($white, $white, $black, 3rem, 1.2rem, .3rem, 0, 2rem);
+  letter-spacing: .1rem;
+}
