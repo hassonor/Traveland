@@ -1,5 +1,6 @@
 ![Twitter](https://github.com/hassonor/Traveland/blob/master/preview.jpg)
-
+![Twitter](https://github.com/hassonor/Traveland/blob/master/preview2.jpg)
+![Twitter](https://github.com/hassonor/Traveland/blob/master/preview3.jpg)
 
 # Getting Started with Create React App
 
