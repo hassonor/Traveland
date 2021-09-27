@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .destinations{
-  margin: 5rem 0;
+  margin: 8rem 0;
   &__heading{
     font-size: 2.8rem;
     color: $black;
@@ -14,9 +14,8 @@
       content: "";
       bottom: -.5rem;
       left: 0;
-      width: 33%;
+      width: 40%;
       height: .2rem;
-
       background: $mainColor1;
     }
   }
@@ -25,5 +24,41 @@
     line-height: 2.7rem;
     color: $lightSilver;
     font-weight: 500;
+  }
+  &__block{
+    margin-top: 6rem;
+  }
+  &__card {
+    width: 100%;
+    height: 35rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-rendering: pixelated;
+      }
+    }
+    &__layer{
+      @include position(absolute, 0, 0, 0, 0, 100%, 100%);
+      @include align(flex, null, flex-end, null);
+      background: linear-gradient(to bottom, transparent 30%, $black);
+      padding: 2rem;
+      color: $white;
+      &__content{
+        @include align(flex, null, center, null);
+        &__country{
+          font-size: 1.5rem;
+          margin-right: .4rem;
+        }
+      }
+    }
   }
 }

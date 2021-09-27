@@ -7,21 +7,24 @@ import ModelProvider from "./context/providers/ModelProvider";
 import Nav from "./components/Nav";
 import NavProvider from "./context/providers/NavProvider";
 import Toggle from "./components/Toggle";
+import DestinationProvider from "./context/providers/DestinationProvider";
 
 function App() {
     return (
         <Router>
             <ModelProvider>
                 <NavProvider>
-                    <Toggle/>
-                    <Nav/>
-                    <HelmetProvider>
-                    <Switch>
-                        <Route path='/' exact component={Home}/>
-                        <Route path='/about' exact component={About}/>
-                        <Route component={NotFound}/>
-                    </Switch>
-                    </HelmetProvider>
+                    <DestinationProvider>
+                        <Toggle/>
+                        <Nav/>
+                        <HelmetProvider>
+                            <Switch>
+                                <Route path='/' exact component={Home}/>
+                                <Route path='/about' exact component={About}/>
+                                <Route component={NotFound}/>
+                            </Switch>
+                        </HelmetProvider>
+                    </DestinationProvider>
                 </NavProvider>
             </ModelProvider>
         </Router>
