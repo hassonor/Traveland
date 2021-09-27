@@ -6,6 +6,7 @@ import ModelContext from "../context/ModelContext";
 import {OPEN_MODEL} from "../context/types/ModelTypes";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
+import Destinations from "../components/Destinations";
 
 const Home = () => {
     const {dispatch} = useContext(ModelContext);
@@ -28,6 +29,7 @@ const Home = () => {
         </Header>
             <Model current={registerModel}><Register currentModel={loginModel}/> </Model>
             <Model current={loginModel}><Login currentModel={registerModel} /> </Model>
+            <Destinations/>
         </>
     )
 }
