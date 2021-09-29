@@ -7,7 +7,7 @@ const NavReducer = (state, action) =>{
     else{
         return state;
     }
-    return state;
+
 }
 
 export default NavReducer;

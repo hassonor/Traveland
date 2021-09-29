@@ -1,6 +1,8 @@
 import {useState} from "react";
+import {LazyLoadImage} from "react-lazy-load-image-component";
+import {Link} from "react-router-dom";
 
-const Header = ({heading, paragraph, children }) => {
+const Header = ({heading, paragraph, children, image}) => {
     const [state] = useState({
         video: './assets/videos/video.mp4',
         poster: '/assets/images/screen.png',
@@ -10,11 +12,13 @@ const Header = ({heading, paragraph, children }) => {
         <div className="header">
             <div className="container">
                 <div className="header__logo">
-                    <img src={state.logo} alt="logoImage"/>
+                    <Link to="/">
+                    <LazyLoadImage src={state.logo} alt="logoImage"/>
+                    </Link>
                 </div>
             </div>
             <div className="header__video">
-            <video src={state.video} autoPlay loop muted poster={state.poster}/>
+                {image ? <img src={image} alt={image}/> : <video src={state.video} autoPlay loop muted poster={state.poster}/> }
             </div>
             <div className='header__contents'>
                 <div className='container'>

@@ -3,7 +3,7 @@ import NavContext from "../context/NavContext";
 import {useContext} from "react";
 
 const Nav = () => {
-    const {state, dispatch} = useContext(NavContext);
+    const {state} = useContext(NavContext);
 
     return (
         <>

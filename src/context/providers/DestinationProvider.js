@@ -5,7 +5,10 @@ import {destinations} from "../../data/destinations";
 
 const DestinationProvider = (props) =>{
     const [destinationsData, dispatch] = useReducer(DestinationReducer, {
-        destinations
+        destinations,
+        details: {
+
+        }
     },undefined);
     return (
         <DestinationContext.Provider value={{destinationsData, dispatch }}>

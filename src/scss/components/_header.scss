@@ -14,6 +14,20 @@
     }
   }
   &__video{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: headerImage .5s linear;
+      @keyframes headerImage {
+        from {
+           opacity: 0;
+        } to {
+          opacity: 1;
+                  }
+
+      }
+    }
     @include abstracts.position(absolute, 0, 0, null, null, 100%, 100%);
     overflow: hidden;
   }
