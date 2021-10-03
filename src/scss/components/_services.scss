@@ -1,0 +1,88 @@
+@use "../abstracts" as *;
+
+.services {
+  margin: 8rem 0;
+  background: $lightSilver-40;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+
+  &__contents {
+    transform: skewY(5deg);
+    &__container{
+      @include align(flex, null, center, null);
+    }
+  }
+
+  &__left {
+    margin-right: 10rem;
+
+    &__heading {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 4rem;
+      background: linear-gradient(35deg, $mainColor1 40%, $black 40%);
+      color: transparent;
+      background-clip: text;
+    }
+
+    &__paragraph {
+      margin-top: 3.6rem;
+      font-size: 1.6rem;
+      line-height: 2.7rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: .5rem;
+
+    &__heading {
+      background: $white;
+      font-size: 1.6rem;
+      font-weight: 400;
+      cursor: pointer;
+      padding: 1.5rem;
+      @include align(flex, null, center, null);
+      text-transform: capitalize;
+      &--active{
+        color: $mainColor1;
+      }
+      &--normal{
+        color: $black;
+      }
+    }
+    &__details{
+      max-height: 0;
+      overflow: hidden;
+      font-size: 1.5rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      line-height: 2.3rem;
+      &--show{
+        max-height: 50rem;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        transition: max-height .8s linear;
+        animation: detailsAnimation .8s ease-in;
+        @keyframes detailsAnimation {
+          from{
+            opacity: 0;
+            transform: translateY(-1rem);
+          }
+          to{
+            opacity: 1;
+            transform: translateY(0rem);
+          }
+
+        }
+      }
+    }
+  }
+  &__rotate{
+    transform: rotate(90deg);
+    transition: transform .6s linear;
+  }
+  &__back{
+    transform: rotate(0deg);
+    transition: transform .4s linear;
+  }
+}
