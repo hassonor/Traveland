@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import {Helmet} from "react-helmet-async";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
@@ -17,6 +17,9 @@ const Home = () => {
     })
     const [registerModel] = useState('registerModel');
     const [loginModel] = useState('loginModel');
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <Helmet>
