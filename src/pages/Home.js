@@ -8,6 +8,7 @@ import Register from "../auth/Register";
 import Login from "../auth/Login";
 import Destinations from "../components/Destinations";
 import Services from "../components/services/Services";
+import Reviews from "../components/reviews/Reviews";
 
 const Home = () => {
     const {dispatch} = useContext(ModelContext);
@@ -35,6 +36,7 @@ const Home = () => {
             <Model current={loginModel}><Login currentModel={registerModel} /> </Model>
             <Destinations/>
             <Services/>
+            <Reviews/>
         </>
     )
 }

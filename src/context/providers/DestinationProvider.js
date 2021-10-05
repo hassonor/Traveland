@@ -1,6 +1,6 @@
 import {useReducer} from "react";
 import DestinationContext from "../DestinationContext";
-import DestinationReducer from "../reducer/DestinationReducer";
+import DestinationReducer from "../reducers/DestinationReducer";
 import {destinations} from "../../data/destinations";
 import Cities from "../../data/cities";
 

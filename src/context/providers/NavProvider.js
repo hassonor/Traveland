@@ -1,6 +1,6 @@
 import {useReducer} from "react";
 import NavContext from "../NavContext";
-import NavReducer from "../reducer/NavReducer";
+import NavReducer from "../reducers/NavReducer";
 
 const NavProvider = (props) => {
     const [state, dispatch] = useReducer(NavReducer, false, undefined);

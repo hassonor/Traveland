@@ -1,6 +1,6 @@
 import {useReducer} from "react";
 import ModelContext from "../ModelContext";
-import ModelReducer from "../reducer/ModelReducer";
+import ModelReducer from "../reducers/ModelReducer";
 const ModelProvider = (props) => {
 
     const [state, dispatch] = useReducer(ModelReducer, {
