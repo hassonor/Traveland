@@ -38,12 +38,12 @@ export const destinations = [
 	},
 	{
 		id: 5,
-		name: 'פקיסטן',
-		details: 'פקיסטן, רשמית הרפובליקה האיסלאמית של פקיסטן, היא מדינה בדרום אסיה. זוהי המדינה החמישית באוכלוסיית העולם עם אוכלוסייה העולה על 212.2 מיליון. יש בה את האוכלוסייה המוסלמית השנייה בגודלה בעולם. זוהי המדינה ה -33 בגודלה לפי שטח, המשתרע על 881,913 קילומטרים רבועים',
-		image: '/assets/destinations/pakistan.jpg',
-		bigImage: '/assets/destinations/pakistanBig.jpg',
-		language: 'אורדו',
-		currency: 'רופי',
+		name: 'קמבודיה',
+		details: 'קמבודיה נמצאת בדרום מזרח אסיה וגובלת בצפון עם לאוס, בצפון ובצפון מערב עם תאילנד, במזרח ודרום מזרח עם ויאטנם, ובדרום עם הים במפרץ תאילנד.',
+		image: '/assets/destinations/cambodia.jpg',
+		bigImage: '/assets/destinations/cambodiaBig.jpg',
+		language: 'חמרית',
+		currency: 'ריל',
 	},
 	{
 		id: 6,

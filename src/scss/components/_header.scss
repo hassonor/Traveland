@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
 .header {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   position: relative;
-  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 60%, 60% 70%, 20% 71%, 0% 60%, 0 0);
   &__logo{
     @include position(absolute, 3rem, 0, null, null, null, null);
     z-index: 1;
@@ -36,7 +36,7 @@
     @include position(absolute, 0, 0, null, null, 100%, 100%);
    background-color:rgba(0,0,0, 0.1);
    &__text{
-      @include align(flex, center, center, 100vh);
+      @include align(flex, center, center, 70vh);
      &__child{
        &__h1{
          color: $white;

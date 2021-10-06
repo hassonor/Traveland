@@ -61,8 +61,8 @@
         max-height: 50rem;
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
-        transition: max-height .8s linear;
-        animation: detailsAnimation .8s ease-in;
+        transition: max-height .3s linear;
+        animation: detailsAnimation .3s ease-in;
         @keyframes detailsAnimation {
           from{
             opacity: 0;
