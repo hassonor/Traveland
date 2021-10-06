@@ -8,7 +8,7 @@ const SharedProvider = (props) => {
     const [sharedData, dispatch] = useReducer(SharedReducer, {
         serviceData: services,
         reviews: reviews,
-    });
+    },undefined);
     return (
         <SharedContext.Provider value={{ sharedData, dispatch }}>
             {props.children}

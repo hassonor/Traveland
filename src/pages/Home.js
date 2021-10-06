@@ -9,6 +9,7 @@ import Login from "../auth/Login";
 import Destinations from "../components/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
+import GalleryComponent from "../components/gallery/GalleryComponent";
 
 const Home = () => {
     const {dispatch} = useContext(ModelContext);
@@ -37,6 +38,7 @@ const Home = () => {
             <Destinations/>
             <Services/>
             <Reviews/>
+            <GalleryComponent/>
         </>
     )
 }
