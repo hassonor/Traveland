@@ -8,7 +8,7 @@ const PageContainer = ({ data, children }) => {
             <div className='page'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-6 animation'>{children}</div>
+                        <div className='col-6'>{children}</div>
                         <div className='col-6'>
                             <div className='page__info'>
                                 <h2 className='heading'>{data.heading}</h2>
