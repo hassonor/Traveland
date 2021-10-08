@@ -1,14 +1,24 @@
 @use "../abstracts" as *;
-
-.destinations{
-  margin: 1rem 0;
-  &__heading{
+.destinations {
+  margin: 8rem 0;
+  @include responsive(xsmall) {
+    margin: 4rem 0;
+  }
+  &__heading {
     font-size: 2.8rem;
     color: $black;
     font-weight: 500;
     width: 60%;
     line-height: 4rem;
     position: relative;
+    @include responsive(large) {
+      width: 100%;
+    }
+    @include responsive(xsmall) {
+      font-size: 2.1rem;
+      line-height: 3.5rem;
+      text-transform: capitalize;
+    }
     &::after {
       position: absolute;
       content: "";
@@ -17,16 +27,22 @@
       width: 40%;
       height: .2rem;
       background: $mainColor1;
+      @include responsive(large) {
+        width: 50%;
+      }
     }
   }
-  &__paragraph{
+  &__paragraph {
     font-size: 1.6rem;
     line-height: 2.7rem;
     color: $lightSilver;
-    font-weight: 500;
+    font-weight: 400;
   }
-  &__block{
+  &__block {
     margin-top: 6rem;
+    @include responsive(xsmall) {
+      margin-top: 3rem;
+    }
   }
   &__card {
     width: 100%;
@@ -34,11 +50,9 @@
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
-
     &__img {
       width: 100%;
       height: 100%;
-
       img {
         width: 100%;
         height: 100%;
@@ -46,17 +60,17 @@
         image-rendering: pixelated;
       }
     }
-    &__layer{
+    &__layer {
       @include position(absolute, 0, 0, 0, 0, 100%, 100%);
       @include align(flex, null, flex-end, null);
       background: linear-gradient(to bottom, transparent 30%, $black);
-      padding: 2rem;
+      padding :2rem;
       color: $white;
-      &__content{
+      &__content {
         @include align(flex, null, center, null);
-        &__country{
+        &__country {
           font-size: 1.5rem;
-          margin-right: .4rem;
+          margin-left: .4rem;
         }
       }
     }
@@ -72,5 +86,6 @@
       visibility: visible;
       transform: scale(1);
     }
+
   }
 }

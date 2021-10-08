@@ -4,6 +4,10 @@
   width: 100%;
   margin-top: 8rem;
   padding: 8rem 0;
+  @include responsive(xsmall){
+    margin-top: 4rem;
+    padding: 4rem 0;
+  }
   &__container {
     width: 100%;
     &__block {
@@ -14,6 +18,12 @@
   &__intro {
     &__img {
       width: 15rem;
+      @include responsive(small){
+        width: 13rem;
+      }
+      @include responsive(xsmall){
+        width: 10rem;
+      }
       img {
         width: 100%;
         height: auto;
@@ -27,7 +37,10 @@
       width: 80%;
       font-weight: 400;
       line-height: 2.5rem;
-
+      @include responsive(xsmall){
+        width: 100%;
+        font-size: 1.4rem;
+      }
     }
   }
   &__heading {
@@ -36,7 +49,9 @@
     font-size: 1.6rem;
     letter-spacing: .2rem;
     margin-bottom: 2rem;
-
+    @include responsive(xsmall){
+      font-size: 1.4rem;
+    }
   }
   &__ul {
     list-style: none;
@@ -63,6 +78,9 @@
     @include align(flex, center, center, null);
     p {
       font-size: 1.5rem;
+      @include responsive(xsmall){
+        font-size: 1.4rem;
+      }
     }
 
   }

@@ -10,8 +10,6 @@ const Login = (props) =>{
     });
     const loginForm = (e) =>{
         e.preventDefault();
-        console.log(state);
-        // Todo
     }
     return (<form onSubmit={loginForm}>
         <div className="model__heading">
@@ -38,7 +36,7 @@ const Login = (props) =>{
                 onChange={(e)=> setState({...state, password: e.target.value})}
             />
         </div>
-        <div className='group flex space-between y-center'>
+        <div className='group model__row'>
             <input type="submit" name="" className="btn-dark" value="התחבר"/>
             <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> צור משתמש חדש</span>
         </div>

@@ -2,11 +2,17 @@
 
 .btn-default{
   @include button($mainColor1, $mainColor2, $white, 4.5rem,1.4rem,.2rem, 0,2rem);
+  @include responsive(xsmall){
+    @include button($mainColor1, $mainColor2, $white, 4rem, 1.3rem,.2rem, 0,2rem);
+  }
 }
 
 .btn-dark{
   @include button($darkBlack, $darkBlack, $white, 4.5rem, 1.4rem, .4rem, 0, 2rem);
   letter-spacing: .1rem;
+  @include responsive(xsamll){
+    @include button($darkBlack, $darkBlack, $white, 4rem, 1.3rem, .4rem, 0, 2rem);
+  }
 }
 
 .btn-dark-sm{

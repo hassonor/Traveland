@@ -1,23 +1,44 @@
-@use "../abstracts";
+@use "../abstracts" as *;
 .model{
-  @include abstracts.position(fixed,0,0,0,0, 100%, 100%);
+  @include position(fixed,0,0,0,0, 100%, 100%);
   background: rgba(0, 0, 0, .4);
-  @include abstracts.align(flex, center, center, null);
+  @include align(flex, center, center, null);
   z-index: 6;
   &__heading{
     h3{
       font-size: 2.1rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
+      @include responsive(xsmall){
+        font-size: 1.7rem;
+      }
     }
 
   }
   &__body{
-      background: abstracts.$white;
+      background: $white;
       width: 40rem;
       height: auto;
       padding: 2rem;
       font-size: 1.4rem;
-    @include abstracts.animation(modelAnimate, .4s, linear, -10rem,  0, 1)
+    @include animation(modelAnimate, .4s, linear, -10rem,  0, 1);
+    @include responsive(xsmall){
+        width: 100%;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(xsmall){
+      flex-direction: column;
+      align-items: start;
+      span{
+        display: block;
+        margin-top: 1rem;
+      }
+    }
   }
 }

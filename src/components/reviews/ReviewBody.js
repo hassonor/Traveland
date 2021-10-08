@@ -28,7 +28,7 @@ const ReviewBody = ({ review }) => {
 	};
 	return (
 		<div className='col-4 p-15'>
-			<div className='reviews__body animation'>
+			<div className='reviews__body'>
 				<div className='reviews__body__contents'>
 					<div className='reviews__body__contents__image'>
 						<LazyLoadImage src={review.image} alt={review.image} />

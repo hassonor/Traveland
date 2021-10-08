@@ -4,6 +4,18 @@
   @include position(fixed, 4rem, null,null, 3rem, null, null);
   cursor: pointer;
   z-index: 5;
+  @include responsive(large){
+    right: 5rem;
+  }
+  @include responsive(medium){
+    right: 4rem;
+  }
+  @include responsive(small){
+    right: 2rem;
+  }
+  @include responsive(xsmall){
+    right: 1.5rem;
+  }
   span:nth-child(1){
       @include toggleSpanStyle($mainColor2, 3rem, .3rem, null);
   }
@@ -19,6 +31,18 @@
   @include position(fixed, 4rem, null,null, 3rem, null, null);
   cursor: pointer;
   z-index: 5;
+  @include responsive(large){
+    right: 5rem;
+  }
+  @include responsive(medium){
+    right: 4rem;
+  }
+  @include responsive(small){
+    right: 2rem;
+  }
+  @include responsive(xsmall){
+    right: 1.5rem;
+  }
   span:nth-child(1){
     @include toggleSpanStyle($mainColor2, 3rem, 1.5px, .5rem);
     transform: rotate(-45deg) translateY(.5rem);

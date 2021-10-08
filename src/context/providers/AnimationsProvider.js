@@ -1,18 +1,37 @@
-import {useReducer} from "react";
-import ModelContext from "../ModelContext";
-import ModelReducer from "../reducers/ModelReducer";
-const ModelProvider = (props) => {
+import {useEffect} from "react";
+import AnimationsContext from "../AnimationsContext";
 
-    const [state, dispatch] = useReducer(ModelReducer, {
-        modelStatus: false,
-        current: '',
-    }, undefined);
+const AnimationsProvider = ({children}) => {
+    const scrollAnimations = () =>{
+        const animation = (elements, className) => {
+            elements.forEach((elm)=>{
+                const elementPosition = elm.getBoundingClientRect().top;
+                const viewPortHeight = window.innerHeight - 150;
+                if(elementPosition < viewPortHeight){
+                    elm.classList.add(className);
+                }
+                else{
+                    elm.classList.remove(className);
+                }
+            });
+        }
+        const elements = document.querySelectorAll('.animation');
+        animation(elements,'animate' );
+
+
+    }
+    useEffect(() => {
+            window.addEventListener('scroll', scrollAnimations);
+    }, []);
+
+
+
 
     return (
-        <ModelContext.Provider value={{state, dispatch}}>
-            {props.children}
-        </ModelContext.Provider>
+        <AnimationsContext.Provider value>
+            {children}
+        </AnimationsContext.Provider>
     )
 }
 
-export default ModelProvider;
+export default AnimationsProvider;

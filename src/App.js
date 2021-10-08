@@ -11,6 +11,8 @@ import DestinationProvider from "./context/providers/DestinationProvider";
 import SharedProvider from "./context/providers/SharedProvider";
 import Details from "./pages/Details";
 import GalleryProvider from "./context/providers/GalleryProvider";
+import Contact from "./pages/Contact";
+import AnimationsProvider from "./context/providers/AnimationsProvider";
 
 function App() {
     return (
@@ -18,20 +20,23 @@ function App() {
             <ModelProvider>
                 <NavProvider>
                     <GalleryProvider>
-                    <DestinationProvider>
-                        <SharedProvider>
-                        <Toggle/>
-                        <Nav/>
-                        <HelmetProvider>
-                            <Switch>
-                                <Route path='/' exact component={Home}/>
-                                <Route path='/about' exact component={About}/>
-                                <Route path='/details/:id' exact component={Details}/>
-                                <Route component={NotFound}/>
-                            </Switch>
-                        </HelmetProvider>
-                        </SharedProvider>
-                    </DestinationProvider>
+                        <DestinationProvider>
+                            <SharedProvider>
+                                <AnimationsProvider>
+                                    <Toggle/>
+                                    <Nav/>
+                                    <HelmetProvider>
+                                        <Switch>
+                                            <Route path='/' exact component={Home}/>
+                                            <Route path='/about' exact component={About}/>
+                                            <Route path='/contact' exact component={Contact}/>
+                                            <Route path='/details/:id' exact component={Details}/>
+                                            <Route component={NotFound}/>
+                                        </Switch>
+                                    </HelmetProvider>
+                                </AnimationsProvider>
+                            </SharedProvider>
+                        </DestinationProvider>
                     </GalleryProvider>
                 </NavProvider>
             </ModelProvider>

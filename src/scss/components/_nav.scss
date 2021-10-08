@@ -7,8 +7,11 @@
 }
 
 .nav{
-  @include position(fixed, 0, null, 0, 0, 31.3rem, 100%);
+  @include position(fixed, 0, null, 0, 0, 31.1rem, 100%);
   @include align(flex, center, center, 100%);
+  @include responsive(xsmall){
+    width: 100%;
+  }
   background:$white;
   z-index: 4;
   transition: all .2s linear;
@@ -25,6 +28,9 @@
         $font-size: 1.6rem;
         font-weight: 400;
         position: relative;
+        @include responsive(xsmall){
+          text-align: center;
+        }
         &:before {
           @include position(absolute, 0,0, 0, 0,100%, 100%);
           content: "";

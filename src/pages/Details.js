@@ -6,6 +6,7 @@ import {CITES, DETAILS} from "../context/types/DestinationTypes";
 import Header from "../components/Header";
 import DestinationInfo from "../components/DestinationInfo";
 import Cities from "../components/cities/Cities";
+import Footer from "../components/footer/Footer";
 
 const Details = () => {
     const {destinationsData, dispatch} = useContext(DestinationContext);
@@ -29,6 +30,7 @@ const Details = () => {
         </Header>
         <DestinationInfo details={details}/>
         <Cities cities={filteredCities} name={details.name}/>
+        <Footer/>
     </>
 }
 

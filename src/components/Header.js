@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {LazyLoadImage} from "react-lazy-load-image-component";
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 const Header = ({heading, paragraph, children, image}) => {
     const [state] = useState({
@@ -8,13 +8,15 @@ const Header = ({heading, paragraph, children, image}) => {
         poster: '/assets/images/screen.png',
         logo: '/assets/images/logo.png'
     })
+    const {push} = useHistory()
+    const goToHome = () =>{
+        push('/');
+    }
     return(
         <div className="header">
             <div className="container">
                 <div className="header__logo">
-                    <Link to="/">
-                    <LazyLoadImage src={state.logo} alt="logoImage"/>
-                    </Link>
+                    <LazyLoadImage src={state.logo} alt="logoImage" onClick={goToHome}/>
                 </div>
             </div>
             <div className="header__video">

@@ -4,6 +4,24 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  @include responsive(large){
+    max-width: 100%;
+    padding: 0 5rem;
+  }
+  @include responsive(medium){
+    max-width: 100%;
+    padding: 0 4rem;
+  }
+  @include responsive(small){
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+  @include responsive(xsmall){
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
 }
 .pr{
   position: relative;
@@ -18,20 +36,20 @@
     cursor: pointer;
   }
   &__control{
-    display: block;
-    width: 100%;
-    border-radius: .4rem;
-    outline: none;
-    font-size: 1.6rem;
-    border: 1px solid $silver;
-    height: 5rem;
-    padding: 0 2rem;
+      @include control(5rem, 0, 1.5rem, $lightSilver-45);
+  }
+  &__textarea{
+    @include control(10rem, 1.5rem, 1.5rem, $lightSilver-45);
+    &::placeholder{
+        font-family: sans-serif;
+        font-size: 1.5rem;
+    }
   }
 }
 
 ::placeholder{
   color: $darkBlack;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .flex{
@@ -69,7 +87,31 @@
   background-clip: text;
   color: transparent;
   transform: rotate(-0.5deg);
-  text-transform: capitalize;
+  @include responsive(xsmall){
+    font-size: 1.8rem;
+  }
+}
+
+.animation{
+  transform: translateY(-10rem) scale(0);
+  opacity: 0;
+  transition: all .6s ease-out;
+}
+
+.animate{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.headingAnimation{
+  transform: translateY(-10rem) scale(0) rotate(-2deg);
+  opacity: 0;
+  transition: all .6s ease-out;
+}
+
+.headingAnimate{
+  transform: translateY(0) scale(1) rotate(-2deg);
+  opacity: 1;
 }
 
 

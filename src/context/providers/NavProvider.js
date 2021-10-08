@@ -6,7 +6,7 @@ const NavProvider = (props) => {
     const [state, dispatch] = useReducer(NavReducer, false, undefined);
     return(
         <NavContext.Provider value={{ state, dispatch }}>
-    {props.children}
+        {props.children}
         </NavContext.Provider>)
 }
 

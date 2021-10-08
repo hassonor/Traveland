@@ -6,13 +6,13 @@ const GalleryComponent = () => {
     const {
         galleryStore: { gallery, lightBoxStatus },
     } = useContext(GalleryContext);
-    const [heading] = useState('Travelers captured images');
+    const [heading] = useState('תמונות מרהיבות שמטיילים צילמו');
     return (
         <>
             {lightBoxStatus ? <LightBox /> : ''}
             <div className='gallery'>
                 <div className='container'>
-                    <h2 className='heading mb-55 headingAnimation'>{heading}</h2>
+                    <h2 className='heading mb-55 animation'>{heading}</h2>
                     <div className='row'>
                         {gallery.length > 0
                             ? gallery.map((glr, index) => (

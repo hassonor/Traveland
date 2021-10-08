@@ -11,7 +11,6 @@ const Register = (props) => {
     });
     const registerForm = (e) =>{
         e.preventDefault();
-        console.log(state);
         // Todo
     }
     return (<form onSubmit={registerForm}>
@@ -48,7 +47,7 @@ const Register = (props) => {
                 onChange={(e)=> setState({...state, password: e.target.value})}
             />
         </div>
-        <div className='group flex space-between y-center'>
+        <div className='group model__row'>
             <input type="submit" name="" className="btn-dark" value="הירשם"/>
             <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> משתמש קיים? התחבר</span>
         </div>

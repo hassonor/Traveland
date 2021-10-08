@@ -38,8 +38,8 @@ const Home = () => {
             <Model current={loginModel}><Login currentModel={registerModel} /> </Model>
             <Destinations/>
             <Services/>
-            <Reviews/>
             <GalleryComponent/>
+            <Reviews/>
             <Footer/>
         </>
     )

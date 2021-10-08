@@ -1,3 +1,4 @@
+@use "breakpoints" as *;
 
 @mixin position($position, $top, $left, $bottom, $right, $width, $height){
   position: $position;
@@ -64,4 +65,38 @@
   border-radius: .6rem;
   font-size: 1.3rem;
   text-transform: capitalize;
+}
+
+@mixin control($height, $padding-y, $padding-x, $color){
+  display: block;
+  width: 100%;
+  border-radius: .4rem;
+  outline: none;
+  font-size: 1.6rem;
+  border: 1px solid $color;
+  height: $height;
+  padding: $padding-y $padding-x;
+}
+
+@mixin responsive($breakpoint){
+  @if $breakpoint == large {
+    @media (max-width: $lg){
+        @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media (max-width: $md){
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media (max-width: $sm){
+      @content;
+    }
+  }
+  @if $breakpoint == xsmall {
+    @media (max-width: $xsm){
+      @content;
+    }
+  }
 }

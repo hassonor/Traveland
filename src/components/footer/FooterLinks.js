@@ -6,7 +6,6 @@ const FooterLinks = () => {
     const {
         destinationsData: { destinations },
     } = useContext(DestinationsContext);
-    console.log(destinations);
 
     const [state] = useState({
         pages: [
