@@ -23,7 +23,7 @@ const CityContents = ({name, duration,price,room,food}) => {
                 {format(price)}
             </div>
             <Facilities name="חדר" value={room}/>
-            <Facilities name="אוכל" value={food}/>
+            <Facilities name="ארוחת בוקר" value={food}/>
             <div className="cities__body__contents__button">
                 <button className="btn-dark-sm">הזמן עכשיו</button>
             </div>
