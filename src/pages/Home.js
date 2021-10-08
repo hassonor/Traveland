@@ -32,7 +32,7 @@ const Home = () => {
                 <meta name='keywords' content='travel,travel tours, places,airline'/>
             </Helmet>
         <Header heading={state.heading} paragraph={state.paragraph}>
-            <button className="btn-default"  onClick={()=> dispatch({type: OPEN_MODEL, payload: registerModel})}>בואו נתחיל</button>
+            <button className="btn-default"  onClick={()=> dispatch({type: OPEN_MODEL, payload: registerModel})}>התחברות</button>
         </Header>
             <Model current={registerModel}><Register currentModel={loginModel}/> </Model>
             <Model current={loginModel}><Login currentModel={registerModel} /> </Model>

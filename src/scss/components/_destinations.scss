@@ -1,8 +1,8 @@
 @use "../abstracts" as *;
 .destinations {
-  margin: 8rem 0;
+  margin: 4rem 0;
   @include responsive(xsmall) {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
   &__heading {
     font-size: 2.8rem;
