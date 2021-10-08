@@ -1,5 +1,4 @@
 import { BsFillStarFill, BsStar } from 'react-icons/bs';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 const ReviewBody = ({ review }) => {
 	const rating = (number) => {
 		let container = [];
@@ -31,7 +30,7 @@ const ReviewBody = ({ review }) => {
 			<div className='reviews__body'>
 				<div className='reviews__body__contents'>
 					<div className='reviews__body__contents__image'>
-						<LazyLoadImage src={review.image} alt={review.image} />
+						<img src={review.image} alt={review.image} />
 					</div>
 					<div className='reviews__body__contents__info'>
 						<div className='reviews__body__contents__info__name'>
