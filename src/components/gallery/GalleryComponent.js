@@ -12,7 +12,7 @@ const GalleryComponent = () => {
             {lightBoxStatus ? <LightBox /> : ''}
             <div className='gallery'>
                 <div className='container'>
-                    <h2 className='heading mb-55 animation'>{heading}</h2>
+                    <h2 className='heading mb-55'>{heading}</h2>
                     <div className='row'>
                         {gallery.length > 0
                             ? gallery.map((glr, index) => (
