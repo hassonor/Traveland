@@ -2,6 +2,8 @@
 ![Twitter](https://github.com/hassonor/Traveland/blob/master/preview2.jpg)
 ![Twitter](https://github.com/hassonor/Traveland/blob/master/preview3.jpg)
 
+LINK: https://cocky-poincare-58c9db.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
