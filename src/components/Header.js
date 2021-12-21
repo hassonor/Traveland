@@ -20,7 +20,7 @@ const Header = ({heading, paragraph, children, image}) => {
                 </div>
             </div>
             <div className="header__video">
-                {image ? <img src={image} alt={image}/> :<img src={state.poster} /> }
+                {image ? <img src={image} alt={image}/> :<img src={state.poster} alt="poster" /> }
             </div>
             <div className='header__contents'>
                 <div className='container'>
