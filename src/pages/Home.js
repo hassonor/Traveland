@@ -8,7 +8,7 @@ import Register from "../auth/Register";
 import Login from "../auth/Login";
 import Destinations from "../components/Destinations";
 import Services from "../components/services/Services";
-import Reviews from "../components/reviews/Reviews";
+// import Reviews from "../components/reviews/Reviews";
 import GalleryComponent from "../components/gallery/GalleryComponent";
 import Footer from "../components/footer/Footer";
 
@@ -39,7 +39,7 @@ const Home = () => {
             <Destinations/>
             <Services/>
             <GalleryComponent/>
-            <Reviews/>
+            {/*<Reviews/>*/}
             <Footer/>
         </>
     )

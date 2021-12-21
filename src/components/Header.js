@@ -5,7 +5,7 @@ import {useHistory} from "react-router-dom";
 const Header = ({heading, paragraph, children, image}) => {
     const [state] = useState({
         video: './assets/videos/video.mp4',
-        poster: '/assets/images/screen.png',
+        poster: '/assets/images/img.avif',
         logo: '/assets/images/logo.png'
     })
     const {push} = useHistory()
@@ -20,7 +20,7 @@ const Header = ({heading, paragraph, children, image}) => {
                 </div>
             </div>
             <div className="header__video">
-                {image ? <img src={image} alt={image}/> : <video src={state.video} autoPlay loop muted poster={state.poster}/> }
+                {image ? <img src={image} alt={image}/> :<img src={state.poster} /> }
             </div>
             <div className='header__contents'>
                 <div className='container'>
